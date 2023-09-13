@@ -1,4 +1,5 @@
-body{
-  background: linear-gradient(red, yellow);
-  background size 400%
+body,
+#grad{
+  background:linear-gradient(lightskyblue, whitesmoke);
+  background-attachment: fixed;
 }

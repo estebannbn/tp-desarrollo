@@ -1,0 +1,29 @@
+.form-container{
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.form{
+  width: 15%;
+  height: fit-content;
+  justify-content: center;
+  align-content: center;
+}
+
+.button-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.forgot-password-container{
+  padding: 0 0 1rem;
+}
+
+button{
+  padding: 0 1rem;
+  width: 45%;
+}
