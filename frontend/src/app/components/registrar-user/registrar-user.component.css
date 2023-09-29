@@ -1,0 +1,10 @@
+.registrar-user{
+  color: var(--white-text-color);
+}
+.aclaracion{
+  font-size: .8rem;
+  color: #d3d3d3;
+}
+.send-btn{
+  font-size: 1.5rem;
+}

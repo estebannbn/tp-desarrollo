@@ -1,5 +1,11 @@
+:root{
+  --main-bg-color: #0a0d13;
+  --linear-gradient-bg: linear-gradient(var(--main-bg-color), #010713);
+  --white-text-color: #f5f4f4
+}
+
 body,
 #grad{
-  background:linear-gradient(lightskyblue, whitesmoke);
+  background: var(--linear-gradient-bg);
   background-attachment: fixed;
 }

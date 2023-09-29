@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegistrarUserComponent } from './components/registrar-user/registrar-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegistrarUsuarioComponent
+    LoginComponent,
+    RegistrarUserComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,10 @@
+.login-section {
+  margin: 3rem;
+  color: var(--white-text-color);
+}
+.form-container{
+  width: 80vw;
+}
+.login-btn{
+  padding: 1.5rem 0;
+}
