@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./registrar-user.component.css']
 })
 export class RegistrarUserComponent {
+  constructor() {}
+  onSubmit(){
 
+  }
 }

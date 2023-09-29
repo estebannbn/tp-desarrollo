@@ -1,31 +1,43 @@
 <section class="registrar-user">
   <h1 class="text-center mt-4">Registrar usuario</h1>
   <div class="container form-container">
-    <form class="row g-3">
+    <form class="row g-3 needs-validation novalidate" #registrarUserForm="ngForm">
       <div class="col-sm-6">
         <label class="form-label" for="name">Nombre</label>
-        <input class="form-control" id="name" type="text">
+        <input class="form-control" id="name" type="text" required ngModel>
       </div>
       <div class="col-sm-6">
         <label class="form-label" for="last-name">Apellido</label>
-        <input class="form-control" id="last-name" type="text">
+        <input class="form-control" id="last-name" type="text" required ngModel>
       </div>
       <div class="col-sm-6">
         <label class="form-label" for="email">Email</label>
-        <input class="form-control" id="email" type="email">
+        <input class="form-control" id="email" type="email" required ngModel>
         <p class="aclaracion">No compartiremos tu mail con nadie</p>
       </div>
       <div class="col-sm-6">
         <label class="form-label" for="password">Password</label>
-        <input class="form-control" id="password" type="password">
+        <input class="form-control" id="password" type="password" required ngModel>
       </div>
       <div class="col-sm-6">
         <label class="form-label" for="password-confirm">Confirmar contraseña</label>
-        <input class="form-control" id="password-confirm" type="password">
+        <input class="form-control" id="password-confirm" type="password" required ngModel>
+      </div>
+      <div class="col-sm-6">
+        <label for="type-user">Tipo de usuario</label>
+        <select id="type-user" class="form-select" aria-label="Default select example" required ngModel>
+          <option selected disabled>elegir tipo de usuario</option>
+          <option value="tecnico">Tecnico</option>
+          <option value="cliente">Cliente</option>
+        </select>
       </div>
       <div class="g-3 row d-flex justify-content-center">
         <button class="btn btn-primary col-sm-5 send-btn" type="submit">Enviar</button>
       </div>
     </form>
   </div>
+  <div *ngIf="registrarUserForm.value">
+    {{registrarUserForm.value | json}}
+  </div>
 </section>
+
