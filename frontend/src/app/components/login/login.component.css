@@ -9,3 +9,15 @@
   padding: 1.2rem 0;
   font-size: 1.3rem;
 }
+h2 .mario{
+  background: black;
+  color: var(--white-text-color);
+  padding: .3rem;
+  border-radius: 6px;
+}
+h2 .bressano{
+  background: #be8413;
+  color: black;
+  padding: .3rem;
+  border-radius: 6px;
+}
