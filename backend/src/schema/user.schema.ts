@@ -3,6 +3,7 @@ import {string, z, TypeOf} from 'zod'
 // TODO agregar confirmacion de contraseña
 
 const userDefinedTypes = ['tecnico', 'cliente'] as const
+
 export const createUserSchema = z.object({
     body: z.object({
         name: string({
