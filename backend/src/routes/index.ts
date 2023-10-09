@@ -1,10 +1,8 @@
-import express, {Request, Response} from "express";
-import {PrismaClient} from '@prisma/client'
-import validateResource from "../middlewares/validateResource";
-import {createUserSchema} from "../schema/user.schema";
-import {createUserController} from "../controllers/user.controllers";
+import express from "express";
+import validateResource from "../middlewares/validateResource.js";
+import {createUserSchema} from "../schema/user.schema.js";
+import {createUserController} from "../controllers/user.controllers.js";
 
-const prisma = new PrismaClient()
 const routes = express.Router()
 
 routes.route('/api/users')

@@ -10,11 +10,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// TODO agregar password y passwordConfirmation
 model User {
-  id       Int    @id @default(autoincrement())
-  name     String
-  lastName String
-  email    String @unique
-  userType String
+  id                   Int     @id @default(autoincrement())
+  name                 String
+  lastName             String
+  email                String  @unique
+  userType             String
+  password             String
+  passwordConfirmation String?
 }

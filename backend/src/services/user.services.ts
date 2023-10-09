@@ -4,6 +4,8 @@ const prisma = new PrismaClient()
 
 
 export const createUserService = (input:User)=>{
+    console.log({input})
+
     return prisma.user.create({
         data:input
     })
