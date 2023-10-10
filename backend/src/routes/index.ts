@@ -8,4 +8,6 @@ const routes = express.Router()
 routes.route('/api/users')
     .post(validateResource(createUserSchema),createUserController)
 
+routes.route('api/users/tecnicos')
+    .get()
 export default routes

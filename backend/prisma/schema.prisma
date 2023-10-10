@@ -11,11 +11,47 @@ datasource db {
 }
 
 model User {
-  id                   Int     @id @default(autoincrement())
-  name                 String
-  lastName             String
-  email                String  @unique
-  userType             String
-  password             String
-  passwordConfirmation String?
+  id          Int                       @id @default(autoincrement())
+  name        String
+  lastName    String
+  email       String                    @unique
+  userType    UserType
+  password    String
+  tecnico     Tecnico?
+  solicitudes Solicitud_De_Reparacion[]
+}
+
+model Tecnico {
+  id                      Int                       @id
+  bio                     String?
+  user                    User                      @relation(fields: [id], references: [id])
+  Solicitud_De_Reparacion Solicitud_De_Reparacion[]
+}
+
+model Solicitud_De_Reparacion {
+  id              Int              @id @default(autoincrement())
+  price           Decimal?
+  device          String
+  deviceModel     String
+  status          EstadoReparacion
+  fechaEnviada    DateTime?
+  fechaRechazada  DateTime?
+  fechaIniciada   DateTime?
+  fechaFinalizado DateTime?
+  idTecnico       Int              @unique
+  idCliente       Int              @unique
+  cliente         User             @relation(fields: [idCliente], references: [id])
+  tecnico         Tecnico          @relation(fields: [idTecnico], references: [id])
+}
+
+enum UserType {
+  cliente
+  tecnico
+}
+
+enum EstadoReparacion {
+  enviado
+  rechazado
+  iniciado
+  finalizado
 }

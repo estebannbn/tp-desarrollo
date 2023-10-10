@@ -22,7 +22,8 @@ Elegir npm o pnpm
 > pnpm run dev
 
 ## Requerimientos
-* Crear usuario ⌛
+* Crear usuario ✅
+  * Crear Tecnico ✅
 * Cambiar contraseña
 * Editar perfil?
 * Eliminar perfil?

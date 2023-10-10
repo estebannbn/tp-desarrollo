@@ -9,6 +9,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
+    "strictPropertyInitialization": false,
     "alwaysStrict": true,
     "skipLibCheck": true,
     "emitDecoratorMetadata": true,

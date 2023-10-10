@@ -1,10 +1,14 @@
 // passwordConfirmation solo se usa cuando el usuario se esta registrando
 
-export default interface User{
+export interface User{
     name:string,
     lastName:string,
     email: string,
     userType:'tecnico' | 'cliente',
-    password: string,
-    passwordConfirmation?: string
+    password: string
+}
+
+export interface Tecnico extends User {
+    id: number,
+    bio?: string
 }
