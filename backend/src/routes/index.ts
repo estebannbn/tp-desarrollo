@@ -1,20 +1,13 @@
-import express, {Request, Response} from "express";
-import {PrismaClient} from '@prisma/client'
+import express from "express";
+import validateResource from "../middlewares/validateResource.js";
+import {createUserSchema} from "../schema/user.schema.js";
+import {createSessionController, createUserController} from "../controllers/user.controllers.js";
+import {createSessionSchema} from "../schema/create.session.js";
 
-const prisma = new PrismaClient()
 const routes = express.Router()
 
-routes.get('/api/users', async (req:Request,res:Response)=>{
-    const result = await prisma.user.create({
-        data:{
-            name: 'esteban',
-            lastName: 'bellini',
-            email: 'estebannahuel29989@live.com',
-            userType: 'cliente'
-        }
-    })
-    console.log(result)
-    res.json(result)
-})
+routes.route('/api/users')
+    .post(validateResource(createUserSchema),createUserController)
+    .get(validateResource(createSessionSchema),createSessionController)
 
 export default routes

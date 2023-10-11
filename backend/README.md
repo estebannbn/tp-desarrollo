@@ -20,3 +20,17 @@ Elegir npm o pnpm
 > npm run dev
 
 > pnpm run dev
+
+## Requerimientos
+* Crear usuario ✅
+  * Crear Tecnico ✅
+* Cambiar contraseña
+* Editar perfil?
+* Eliminar perfil?
+* Log in
+* Registrar dispositivo
+* Eliminar dispositivo
+* Registrar pedido
+* Marcar pedido como completado
+* Marcar pedido como retirado
+* Marcar pedido como cancelado?
