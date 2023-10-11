@@ -25,3 +25,11 @@ export const createTecnicoService = (input:number)=>{
         }
     })
 }
+
+export const findUserByEmail = (email:string) => {
+    return prisma.user.findFirstOrThrow({
+        where:{
+            email
+        }
+    })
+}
