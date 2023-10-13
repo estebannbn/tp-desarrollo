@@ -6,8 +6,6 @@ import * as process from "process";
 
 dotenv.config()
 const prisma = new PrismaClient()
-
-
 export const createUserService = async(input:User)=>{
     console.log({input})
     // Hay que arreglar el problema que resuelve el '!'
@@ -17,7 +15,6 @@ export const createUserService = async(input:User)=>{
         data:input
     })
 }
-
 export const createTecnicoService = (input:number)=>{
     return prisma.tecnico.create({
         data:{
@@ -25,11 +22,17 @@ export const createTecnicoService = (input:number)=>{
         }
     })
 }
-
 export const findUserByEmail = (email:string) => {
     return prisma.user.findFirstOrThrow({
         where:{
             email
+        }
+    })
+}
+export const findUserById = (id:number) => {
+    return prisma.user.findFirst({
+        where:{
+            id
         }
     })
 }
